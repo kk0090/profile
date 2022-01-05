@@ -4,8 +4,47 @@
   <link rel="stylesheet" href="https://kk0090.github.io/profile/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
+  <script  src="jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.mainvisual').hover(
+        function(){
+          $('.place').fadeIn();
+        },
+        function(){
+          $('.place').fadeOut();
+        }
+      );
+      
+    });
 
-  <title>Document</title>
+    
+  </script>
+
+  <script>
+    $(function(){
+      $(window).on('load scroll',function(){
+
+       var mainWrapper = $('.fadein');
+
+ 
+       mainWrapper.each(function(){
+         
+        var mainWrapperOffset = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var wh = $(window).height();
+ 
+        if(scroll > mainWrapperOffset - wh + 100){
+        $(this).addClass('animated');
+        }
+       });
+ 
+      });
+    });
+
+  </script>
+
+  <title>Profile</title>
 </head>
 <body>
   <header >
@@ -31,8 +70,11 @@
   <main>
 
 
-    <div class="wrapper mainvisual"><img src="IMG_6942.JPG" alt=""></div>
-    <section id="profile" class="wrapper">
+    <div class="wrapper mainvisual"><img src="IMG_6942.JPG" alt="">
+    <p class="place">Izumiyadoike in Senjogahara</p>
+    </div>
+
+    <section id="profile" class="main-wrapper fadein">
     <div class="container">
     <div class="row">
       <div class="profile-img col-md-4"><img src="IMG_1402.JPG" alt=""></div>
@@ -46,7 +88,7 @@
     </div>
   </section>
 
-    <section id="hobby" class="wrapper">
+    <section id="hobby" class="main-wrapper fadein">
       <h3 class="title">Hobby</h3>
       <div class="container">
         <div class="hobbys row">
@@ -86,7 +128,7 @@
       </div>
     </section>
 
-   <section id="career" class="wrapper career">
+   <section id="career" class="main-wrapper career fadein">
     <h5 class="title">Career</h5>
     <ul>
       <li>2017年3月 <a href="https://www.osaka-gu.ac.jp/">大阪学院大学</a> を卒業</li>
@@ -97,7 +139,7 @@
 
    </section>
 
-   <section iD="studying" class="wrapper">
+   <section iD="studying" class="main-wrapper fadein">
     <div class="study">
       <h6 class="title">Studying</h6>
       <div class="container">
@@ -129,5 +171,6 @@
     </div>
   </footer>
   <script  src="script.js"></script>
+
 </body>
 </html>

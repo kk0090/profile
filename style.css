@@ -16,17 +16,34 @@ li{
 }
 
 
-.wrapper{
+.main-wrapper,.mainvisual{
   max-width: 70%;
   margin:0 auto 200px auto;
+  
 }
 
+
+
+.fadein{
+  opacity: 0;
+  transition: 1.5s;
+  transform: translate3d(0,-10px,0);
+}
+
+.fadein.animated{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+
 /*header*/
-header .wrapper{
+.head-wrapper{
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
+  max-width: 70%;
+  margin:0 auto  ;
 }
 
 h1{
@@ -62,6 +79,20 @@ h1{
 
 
 /*main*/
+.mainvisual{
+  position: relative;
+  top:100px
+}
+
+.place{
+  position:absolute;
+  top:80%;
+  left:80%;
+  color:white;
+  font-family: serif;
+  display: none;
+ }
+
 .mainvisual img{
   width: 100%;
   height:600px;
@@ -69,9 +100,13 @@ h1{
   margin-bottom:100px;
 }
 
+
+
 .profile-img img{
   border-radius: 30px;
 }
+
+
 
 
 h3{
