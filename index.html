@@ -4,45 +4,7 @@
   <link rel="stylesheet" href="https://kk0090.github.io/profile/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
-  <script  src="jquery-3.6.0.min.js"></script>
-  <script>
-    $(function(){
-      $('.mainvisual').hover(
-        function(){
-          $('.place').fadeIn();
-        },
-        function(){
-          $('.place').fadeOut();
-        }
-      );
-      
-    });
-
-    
-  </script>
-
-  <script>
-    $(function(){
-      $(window).on('load scroll',function(){
-
-       var mainWrapper = $('.fadein');
-
  
-       mainWrapper.each(function(){
-         
-        var mainWrapperOffset = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var wh = $(window).height();
- 
-        if(scroll > mainWrapperOffset - wh + 100){
-        $(this).addClass('animated');
-        }
-       });
- 
-      });
-    });
-
-  </script>
 
   <title>Profile</title>
 </head>
@@ -171,6 +133,45 @@
     </div>
   </footer>
   <script  src="script.js"></script>
+  <script  src="jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.mainvisual').hover(
+        function(){
+          $('.place').fadeIn();
+        },
+        function(){
+          $('.place').fadeOut();
+        }
+      );
+      
+    });
+
+    
+  </script>
+
+  <script>
+    $(function(){
+      $(window).on('load scroll',function(){
+
+       var mainWrapper = $('.fadein');
+
+ 
+       mainWrapper.each(function(){
+         
+        var mainWrapperOffset = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var wh = $(window).height();
+ 
+        if(scroll > mainWrapperOffset - wh + 100){
+        $(this).addClass('animated');
+        }
+       });
+ 
+      });
+    });
+
+  </script>
 
 </body>
 </html>
